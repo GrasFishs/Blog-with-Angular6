@@ -1,0 +1,10 @@
+<nav [ngStyle]="styles">
+  <div class="left">
+    <ng-to-home></ng-to-home>
+    <input type="text" placeholder="搜索" id="search">
+  </div>
+  <div class="right">
+    <ng-button type="border" (click)="to('access/login')">登录</ng-button>
+    <ng-button (click)="to('access/register')">注册</ng-button>
+  </div>
+</nav>

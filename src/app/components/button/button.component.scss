@@ -1,0 +1,32 @@
+.button {
+  min-width: 100px;
+  padding: 0 20px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  display: inline-block;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+  font-size: 20px;
+  background: #283593;
+  color: #fff;
+  transition: 0.2s all ease;
+  cursor: pointer;
+  user-select: none;
+  box-sizing: border-box;
+  &:hover {
+    background: #1A237E;
+  }
+}
+
+.border {
+  background: white;
+  border: 2px solid #283593;
+  color: #283593;
+  &:hover {
+    background: white;
+    border: 2px solid #1A237E;
+    color: #1A237E;
+  }
+}
