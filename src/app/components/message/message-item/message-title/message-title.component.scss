@@ -1,12 +1,30 @@
-.title{
+.title {
   display: flex;
   align-items: center;
 
-  .sub{
-    font-size: 1.2em;
-    font-weight: 700;
+  .info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .sub {
+      font-size: 1.2em;
+      font-weight: 700;
+    }
+    .date {
+      margin-left: 20px;
+    }
   }
-  .date{
-    margin-left: 20px;
+}
+
+@media all and (max-width: 768px) {
+  .title {
+    align-items: start;
+    .info {
+      flex-direction: column;
+      align-items: start;
+      .date {
+        margin-left: 0px;
+      }
+    }
   }
 }

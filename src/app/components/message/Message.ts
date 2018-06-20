@@ -3,6 +3,7 @@ export interface Message {
   type: string; // 'comment'发表评论，'reply'回复，'review'审核，'publish'发表,'system'系统
   content: string;
   date: Date;
+  viewed: boolean;
   /**
    * 以下为 system必要的值
    */

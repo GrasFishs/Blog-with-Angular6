@@ -7,6 +7,7 @@ import {MessageTitleComponent} from '../components/message/message-item/message-
 import {FormatDatePipe} from '../tools/format-date.pipe';
 import {MessageContentComponent} from '../components/message/message-item/message-content/message-content.component';
 import {RouterModule} from '@angular/router';
+import {ToolsModule} from './tools.module';
 
 const components = [MessagePageComponent, MessageItemComponent, MessageTitleComponent, MessageContentComponent, FormatDatePipe];
 
@@ -14,6 +15,7 @@ const components = [MessagePageComponent, MessageItemComponent, MessageTitleComp
   imports: [
     CommonModule,
     RouterModule,
+    ToolsModule,
     NgZorroAntdModule.forRoot(),
   ],
   declarations: components,

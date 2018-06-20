@@ -14,7 +14,19 @@ nav {
   .left, .right {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
   }
+
+  .right {
+    .message {
+      font-size: 1.5em;
+      font-weight: 700;
+      margin: 0 10px;
+    }
+  }
+
   input#search {
     margin-left: 50px;
     display: block;
@@ -29,6 +41,27 @@ nav {
 
     &:focus {
       width: 200px;
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+  nav{
+    input#search {
+      margin-left: 10px;
+      width: 100px;
+      height: 30px;
+
+      &:focus {
+        width: 120px;
+      }
+    }
+
+    .right {
+      .message {
+        font-size: 1em;
+        font-weight: normal;
+      }
     }
   }
 }

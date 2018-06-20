@@ -11,7 +11,14 @@ export class MessageService {
   }
 
   getType(type: number) {
-    return of(messages.filter(msg => msg.msgType === type));
+    const filterMessages = messages.filter(msg => msg.msgType === type);
+    const sortMessages = filterMessages.sort((a, b) => a.viewed && !b.viewed ? 1 : -1);
+    return of(sortMessages);
+  }
+
+  getNewCount(type: number) {
+    const filterMessages = messages.filter(msg => msg.msgType === type && !msg.viewed);
+    return filterMessages.length;
   }
 
 }

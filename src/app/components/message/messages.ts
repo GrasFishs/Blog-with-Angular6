@@ -8,9 +8,10 @@ export const messages: Message[] = [
     date: new Date(),
     userId: '1',
     username: 'overload',
-    avatar: '',
+    avatar: 'assets/grasfish.png',
     articleId: '1',
-    articleTitle: 'react native 的基本配置'
+    articleTitle: 'react native 的基本配置',
+    viewed: false
   },
   {
     msgType: 1,
@@ -19,21 +20,24 @@ export const messages: Message[] = [
     date: new Date(),
     userId: '2',
     username: '冰千里',
-    avatar: '',
+    avatar: 'assets/grasfish.png',
     articleId: '2',
-    articleTitle: 'sass的使用'
+    articleTitle: 'sass的使用',
+    viewed: false
   },
   {
     msgType: 1,
     type: 'review',
     content: '你的博文《色彩-Material design》已通过审核！',
     date: new Date(),
+    viewed: false
   },
   {
     msgType: 1,
     type: 'review',
     content: '你的博文《关于游戏分级的看法》未通过审核！该博文内容由于违反本站的XXX条例无法通过审核，请修改或不提交。',
     date: new Date(),
+    viewed: true
   },
   {
     msgType: 0,
@@ -41,6 +45,7 @@ export const messages: Message[] = [
     title: '新版本上线',
     content: '本站更新了XXX模块，可以XXX。1.01e更新添加了标签管理功能……',
     date: new Date(),
+    viewed: false
   },
   {
     msgType: 2,
@@ -49,9 +54,10 @@ export const messages: Message[] = [
     date: new Date(),
     userId: '2',
     username: '冰千里',
-    avatar: '',
+    avatar: 'assets/grasfish.png',
     articleId: '3',
-    articleTitle: 'sass的使用'
+    articleTitle: 'sass的使用',
+    viewed: true
   },
   {
     msgType: 2,
@@ -60,8 +66,9 @@ export const messages: Message[] = [
     date: new Date(),
     userId: '1',
     username: 'overload',
-    avatar: '',
+    avatar: 'assets/grasfish.png',
     articleId: '3',
-    articleTitle: '大前端与云端的发展趋势分析'
+    articleTitle: '大前端与云端的发展趋势分析',
+    viewed: false
   },
 ];

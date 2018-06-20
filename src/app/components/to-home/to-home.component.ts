@@ -11,7 +11,13 @@ import {Router} from '@angular/router';
   styles: [`.to-home{
     font-size: 1.5em;
     color: #1A237E;
+    font-weight: bold;
     cursor: pointer;
+  }
+  @media all and (max-width: 768px){
+    .to-home{
+      font-weight: normal;
+    }
   }`]
 })
 export class ToHomeComponent implements OnInit {

@@ -3,12 +3,17 @@ import {CommonModule} from '@angular/common';
 import {ButtonComponent} from '../components/button/button.component';
 import {NavigatorComponent} from '../components/navigator/navigator.component';
 import {ToHomeComponent} from '../components/to-home/to-home.component';
+import {NgZorroAntdModule} from 'ng-zorro-antd';
+import {AvatarComponent} from '../components/avatar/avatar.component';
+import {RoutingModule} from './routing.module';
 
-const components = [ToHomeComponent, ButtonComponent, NavigatorComponent];
+const components = [ToHomeComponent, ButtonComponent, NavigatorComponent, AvatarComponent];
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    NgZorroAntdModule.forRoot(),
+    RoutingModule,
   ],
   declarations: components,
   exports: components

@@ -1,19 +1,34 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 import {Router, NavigationEnd} from '@angular/router';
+import {MessageService} from '../message/message.service';
+import {Observable} from 'rxjs/Observable';
+import 'rxjs/add/observable/fromEvent';
+import {debounceTime} from 'rxjs/operators';
 
 @Component({
   selector: 'ng-navigator',
   templateUrl: './navigator.component.html',
-  styleUrls: ['./navigator.component.scss']
+  styleUrls: ['./navigator.component.scss'],
+  providers: [MessageService]
 })
 export class NavigatorComponent implements OnInit {
 
+  @Input() login: boolean;
   public styles;
 
-  constructor(private route: Router) {
+  public counts = [];
+  public texts = ['系统', '私信', '动态'];
+  public messagesCount: number;
+  public innerWidth: number;
+
+  constructor(private route: Router, private msgService: MessageService) {
   }
 
   ngOnInit() {
+    this.counts.push(this.msgService.getNewCount(0));
+    this.counts.push(this.msgService.getNewCount(1));
+    this.counts.push(this.msgService.getNewCount(2));
+    this.messagesCount = this.counts.reduce((a, b) => a + b);
     this.route.events.subscribe(event => {
         if (event instanceof NavigationEnd) {
           // 如果是登录或注册界面，则隐藏该导航栏
@@ -23,6 +38,12 @@ export class NavigatorComponent implements OnInit {
         }
       }
     );
+    this.innerWidth = +window.innerWidth;
+    Observable.fromEvent(window, 'resize').pipe(
+      debounceTime(100),
+    ).subscribe(event => {
+      this.innerWidth = +window.innerWidth;
+    });
   }
 
   to(route) {

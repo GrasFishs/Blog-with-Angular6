@@ -12,7 +12,14 @@ nav {
   /*margin-bottom: 76px;*/ }
   nav .left, nav .right {
     display: flex;
-    flex-direction: row; }
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    user-select: none; }
+  nav .right .message {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin: 0 10px; }
   nav input#search {
     margin-left: 50px;
     display: block;
@@ -26,5 +33,16 @@ nav {
     transition: 0.5s all ease; }
     nav input#search:focus {
       width: 200px; }
+
+@media all and (max-width: 768px) {
+  nav input#search {
+    margin-left: 10px;
+    width: 100px;
+    height: 30px; }
+    nav input#search:focus {
+      width: 120px; }
+  nav .right .message {
+    font-size: 1em;
+    font-weight: normal; } }
 
 /*# sourceMappingURL=navigator.component.css.map */

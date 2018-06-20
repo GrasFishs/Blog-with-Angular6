@@ -1,7 +1,7 @@
 <nz-tabset
-  [nzTabPosition]="'left'"
+  [nzTabPosition]="tabPosition"
   [(nzSelectedIndex)]="selectedIndex"
-  (nzSelectChange)="getContent(selectedIndex)"
+  (nzSelectChange)="routeChange(selectedIndex)"
   [nzType]="'line'">
   <nz-tab
     *ngFor="let tab of tabs"

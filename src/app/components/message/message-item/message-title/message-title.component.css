@@ -1,10 +1,23 @@
 .title {
   display: flex;
   align-items: center; }
-  .title .sub {
-    font-size: 1.2em;
-    font-weight: 700; }
-  .title .date {
-    margin-left: 20px; }
+  .title .info {
+    display: flex;
+    flex-direction: row;
+    align-items: center; }
+    .title .info .sub {
+      font-size: 1.2em;
+      font-weight: 700; }
+    .title .info .date {
+      margin-left: 20px; }
+
+@media all and (max-width: 768px) {
+  .title {
+    align-items: start; }
+    .title .info {
+      flex-direction: column;
+      align-items: start; }
+      .title .info .date {
+        margin-left: 0px; } }
 
 /*# sourceMappingURL=message-title.component.css.map */
