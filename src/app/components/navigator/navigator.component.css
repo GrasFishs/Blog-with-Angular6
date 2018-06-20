@@ -34,7 +34,7 @@ nav {
     nav input#search:focus {
       width: 200px; }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 576px) {
   nav input#search {
     margin-left: 10px;
     width: 100px;

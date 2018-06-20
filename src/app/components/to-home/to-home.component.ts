@@ -14,7 +14,7 @@ import {Router} from '@angular/router';
     font-weight: bold;
     cursor: pointer;
   }
-  @media all and (max-width: 768px){
+  @media all and (max-width: 576px){
     .to-home{
       font-weight: normal;
     }

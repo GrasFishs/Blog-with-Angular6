@@ -1,9 +1,6 @@
 import {Component, OnInit, Input} from '@angular/core';
 import {Router, NavigationEnd} from '@angular/router';
 import {MessageService} from '../message/message.service';
-import {Observable} from 'rxjs/Observable';
-import 'rxjs/add/observable/fromEvent';
-import {debounceTime} from 'rxjs/operators';
 
 @Component({
   selector: 'ng-navigator',
@@ -38,12 +35,6 @@ export class NavigatorComponent implements OnInit {
         }
       }
     );
-    this.innerWidth = +window.innerWidth;
-    Observable.fromEvent(window, 'resize').pipe(
-      debounceTime(100),
-    ).subscribe(event => {
-      this.innerWidth = +window.innerWidth;
-    });
   }
 
   to(route) {

@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {Location} from '@angular/common';
 import {ArticleService} from '../article.service';
-import {Article} from '../article-item/Article';
+import {Article} from '../Article';
 
 @Component({
   selector: 'ng-article',

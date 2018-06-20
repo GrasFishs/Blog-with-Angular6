@@ -1,0 +1,94 @@
+.panel {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+
+  .left, .right {
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .left {
+    border-right: 1px solid lightgray;
+    .name_signature {
+      display: flex;
+      flex-direction: column;
+      .username {
+        font-size: 2em;
+        font-weight: bold;
+        color: black;
+      }
+
+      input {
+        width: 120px;
+        outline: none;
+        border: none;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: white;
+        transition: 0.2s all ease;
+        background: white;
+
+        &:focus {
+          border-bottom-color: lightgray;
+        }
+      }
+      input.signature {
+        width: 150px;
+      }
+    }
+  }
+
+  .right .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 40px;
+
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+  .panel {
+    .left, .right {
+      padding: 0px 10px;
+    }
+
+    .left {
+      .name_signature .username {
+        font-size: 1.5em;
+        font-weight: bold;
+      }
+
+      input {
+        width: 50px;
+      }
+      input.signature {
+        width: 70px;
+      }
+    }
+
+    .right{
+      flex-direction: column;
+      .item {
+        flex-direction: row;
+        margin-right: 0px;
+        margin-bottom: 5px;
+
+        .value{
+          font-size: 1.2em;
+          margin-left: 20px;
+        }
+
+        &:last-child {
+          margin-bottom: 0px;
+        }
+      }
+    }
+  }
+
+}

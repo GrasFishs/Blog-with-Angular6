@@ -1,0 +1,31 @@
+<div class="panel">
+  <div class="left">
+    <ng-avatar [src]="user.avatar" [size]="100" [userId]="user.userId" style="margin-right: 10px"></ng-avatar>
+    <div class="name_signature">
+      <div class="username">
+        <input [(ngModel)]="user.username" />
+      </div>
+      <div class="signature">
+        <input class="signature" [(ngModel)]="user.signature" placeholder="编辑个性签名"/>
+      </div>
+    </div>
+  </div>
+  <div class="right">
+    <div class="item">
+      <div>关注</div>
+      <div class="value">{{user.followingAmount}}</div>
+    </div>
+    <div class="item">
+      <div>粉丝</div>
+      <div class="value">{{user.followedAmount}}</div>
+    </div>
+    <div class="item">
+      <div>文章</div>
+      <div class="value">{{user.articleAmount}}</div>
+    </div>
+    <div class="item">
+      <div>喜欢</div>
+      <div class="value">{{user.likedAmount}}</div>
+    </div>
+  </div>
+</div>

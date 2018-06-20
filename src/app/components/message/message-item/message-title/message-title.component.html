@@ -1,14 +1,18 @@
 <div [ngSwitch]="message.type" class="title">
-  <ng-avatar *ngIf="message.type !== 'system' && message.type !=='review'" [src]="message.avatar" style="margin-right: 20px"></ng-avatar>
+  <ng-avatar
+    *ngIf="message.type !== 'system' && message.type !=='review'"
+    [userId]="message.userId"
+    [src]="message.avatar"
+    style="margin-right: 20px"></ng-avatar>
   <div class="info">
     <div *ngSwitchCase="'comment'">
-      <span  class="sub">{{message.username}}</span>发表了评论
+      <span class="sub" [routerLink]="['/user',message.userId]">{{message.username}}</span>发表了评论
     </div>
     <div *ngSwitchCase="'reply'">
-      <span  class="sub">{{message.username}}</span>评论了你
+      <span class="sub" [routerLink]="['/user',message.userId]">{{message.username}}</span>评论了你
     </div>
     <div *ngSwitchCase="'publish'">
-      <span  class="sub">{{message.username}}</span>发布了文章
+      <span class="sub" [routerLink]="['/user',message.userId]">{{message.username}}</span>发布了文章
     </div>
     <div *ngSwitchCase="'review'" class="sub">审核通知</div>
     <div *ngSwitchCase="'system'" class="sub">{{message.title}}</div>

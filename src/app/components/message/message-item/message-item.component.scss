@@ -1,6 +1,12 @@
-.item{
+.item {
   min-height: 134px;
   margin-top: 20px;
   background: #EEEEEE;
   padding: 10px 20px 20px;
+
+  transition: 0.2s all ease;
+  &:hover {
+    transform: translateY(-5px);
+    background: #ddd;
+  }
 }

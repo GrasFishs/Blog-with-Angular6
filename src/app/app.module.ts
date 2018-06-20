@@ -4,7 +4,7 @@ import {ToolsModule} from './modules/tools.module';
 import {HomeModule} from './modules/home.module';
 import {AccessModule} from './modules/access.module';
 import {MessageModule} from './modules/message.module';
-
+import {UserModule} from './modules/user.module';
 import {AppComponent} from './app.component';
 import {RoutingModule} from './modules/routing.module';
 
@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import {registerLocaleData} from '@angular/common';
 import zh from '@angular/common/locales/zh';
+
 
 registerLocaleData(zh);
 
@@ -28,6 +29,7 @@ registerLocaleData(zh);
     HomeModule,
     AccessModule,
     MessageModule,
+    UserModule,
     RoutingModule,
     FormsModule,
     HttpClientModule,

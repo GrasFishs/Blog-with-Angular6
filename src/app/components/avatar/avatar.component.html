@@ -1,3 +1,4 @@
-<div>
-  <img src="assets/grasfish.png" class="avatar" [ngStyle]="styles"/>
-</div>
+<img [routerLink]="['/user', userId]"
+     style="cursor: pointer;user-select: none;"
+     [src]="src"
+     class="avatar" [ngStyle]="styles"/>

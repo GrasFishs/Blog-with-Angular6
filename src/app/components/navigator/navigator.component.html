@@ -4,7 +4,7 @@
     <input type="text" placeholder="搜索" id="search">
   </div>
   <div *ngIf="login" class="right">
-    <ng-avatar [src]="'/assets/grasfish.png'"></ng-avatar>
+    <ng-avatar [src]="'/assets/grasfish.png'" [userId]="1"></ng-avatar>
     <nz-dropdown [nzPlacement]="'bottomCenter'">
       <nz-badge [nzOverflowCount]="99" [nzCount]="messagesCount" nz-dropdown>
         <div class="message" [routerLink]="['/message']">消息</div>
@@ -22,11 +22,13 @@
         </li>
       </ul>
     </nz-dropdown>
-    <ng-button style="margin-left: 20px" *ngIf="innerWidth>=768">写文章</ng-button>
-    <ng-button style="margin-left: 15px" *ngIf="innerWidth<768"><i class="anticon anticon-edit"></i></ng-button>
+    <ng-button style="margin-left: 20px" class="d-none d-sm-block">写文章</ng-button>
+    <ng-button style="margin-left: 15px" class="d-sm-none d-block"><i class="anticon anticon-edit"></i></ng-button>
   </div>
   <div *ngIf="!login" class="right">
-    <ng-button type="border" (click)="to('access/login')">登录</ng-button>
-    <ng-button (click)="to('access/register')">注册</ng-button>
+    <ng-button type="border" (click)="to('access/login')" class="d-none d-sm-block">登录</ng-button>
+    <ng-button style="margin-left: 20px" (click)="to('access/register')" class="d-none d-sm-block">注册</ng-button>
+    <ng-button type="border" (click)="to('access/login')" class="d-sm-none d-block"><i class="anticon anticon-select"></i></ng-button>
+    <ng-button style="margin-left: 15px" (click)="to('access/register')" class="d-sm-none d-block"><i class="anticon anticon-profile"></i></ng-button>
   </div>
 </nav>

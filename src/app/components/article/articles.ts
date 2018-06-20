@@ -1,6 +1,6 @@
-import {Article} from '../article-item/Article';
+import {Article} from './Article';
 
-export const articles: Array<Article> = [
+export const articles: Article[] = [
   {
     id: '1',
     title: '色彩1',
@@ -10,6 +10,7 @@ export const articles: Array<Article> = [
     阴影和高光。引出意想不到且充满活力的颜色。色彩从当代建筑、路标、人行横道以及
     运动场馆中获取灵感，由此引发出大胆的颜色表达激活了色彩，与单调乏味的周边环境
     形成鲜明的对比。……`,
+    authorId: '1',
     author: 'grasfish',
     comments: '1.7k',
     likes: '1.5k',
@@ -25,7 +26,8 @@ export const articles: Array<Article> = [
     阴影和高光。引出意想不到且充满活力的颜色。色彩从当代建筑、路标、人行横道以及
     运动场馆中获取灵感，由此引发出大胆的颜色表达激活了色彩，与单调乏味的周边环境
     形成鲜明的对比。……`,
-    author: 'grasfish',
+    authorId: '2',
+    author: 'overload',
     comments: '1.7k',
     likes: '1.5k',
     date: new Date(),
@@ -40,7 +42,8 @@ export const articles: Array<Article> = [
     阴影和高光。引出意想不到且充满活力的颜色。色彩从当代建筑、路标、人行横道以及
     运动场馆中获取灵感，由此引发出大胆的颜色表达激活了色彩，与单调乏味的周边环境
     形成鲜明的对比。……`,
-    author: 'grasfish',
+    authorId: '3',
+    author: '冰千里',
     comments: '1.7k',
     likes: '1.5k',
     date: new Date(),

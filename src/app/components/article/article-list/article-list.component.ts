@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {Article} from '../article-item/Article';
-import {articles} from './articles';
 import {ArticleService} from '../article.service';
+import {ActivatedRoute} from '@angular/router';
 
 
 @Component({
@@ -14,15 +13,23 @@ export class ArticleListComponent implements OnInit {
 
   public articles;
 
-  constructor(private articleService: ArticleService) {
+  constructor(private articleService: ArticleService, private route: ActivatedRoute) {
   }
 
   ngOnInit() {
     this.getArticles();
+    this.getArticlesByUserId();
   }
 
   getArticles(): void {
-    this.articleService.getArticles().subscribe(a => this.articles = a);
+    this.articleService.getArticles().subscribe(articles => this.articles = articles);
+  }
+
+  getArticlesByUserId() {
+    const userId = this.route.snapshot.paramMap.get('id');
+    if (userId) {
+      this.articleService.getArticlesByUserId(userId).subscribe(articles => this.articles = articles);
+    }
   }
 
 }

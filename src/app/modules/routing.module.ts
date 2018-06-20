@@ -6,6 +6,7 @@ import {LoginPageComponent} from '../pages/login-page/login-page.component';
 import {RegisterPageComponent} from '../pages/register-page/register-page.component';
 import {ArticleComponent} from '../components/article/article/article.component';
 import {MessagePageComponent} from '../pages/message-page/message-page.component';
+import {UserPageComponent} from '../pages/user-page/user-page.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -25,6 +26,9 @@ const routes: Routes = [
   },
   {
     path: 'message', component: MessagePageComponent
+  },
+  {
+    path: 'user/:id', component: UserPageComponent
   }
 ];
 

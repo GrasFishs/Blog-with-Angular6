@@ -1,0 +1,61 @@
+.panel {
+  display: flex;
+  align-items: center;
+  margin-top: 20px; }
+  .panel .left, .panel .right {
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: row; }
+  .panel .left {
+    border-right: 1px solid lightgray; }
+    .panel .left .name_signature {
+      display: flex;
+      flex-direction: column; }
+      .panel .left .name_signature .username {
+        font-size: 2em;
+        font-weight: bold;
+        color: black; }
+      .panel .left .name_signature input {
+        width: 120px;
+        outline: none;
+        border: none;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: white;
+        transition: 0.2s all ease;
+        background: white; }
+        .panel .left .name_signature input:focus {
+          border-bottom-color: lightgray; }
+      .panel .left .name_signature input.signature {
+        width: 150px; }
+  .panel .right .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 40px; }
+    .panel .right .item:last-child {
+      margin-right: 0px; }
+
+@media all and (max-width: 768px) {
+  .panel .left, .panel .right {
+    padding: 0px 10px; }
+  .panel .left .name_signature .username {
+    font-size: 1.5em;
+    font-weight: bold; }
+  .panel .left input {
+    width: 50px; }
+  .panel .left input.signature {
+    width: 70px; }
+  .panel .right {
+    flex-direction: column; }
+    .panel .right .item {
+      flex-direction: row;
+      margin-right: 0px;
+      margin-bottom: 5px; }
+      .panel .right .item .value {
+        font-size: 1.2em;
+        margin-left: 20px; }
+      .panel .right .item:last-child {
+        margin-bottom: 0px; } }
+
+/*# sourceMappingURL=user-panel.component.css.map */
