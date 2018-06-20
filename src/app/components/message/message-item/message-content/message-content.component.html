@@ -1,0 +1,19 @@
+<div [ngSwitch]="message.type" class="content">
+  <div *ngSwitchCase="'comment'">
+    <div class="cont">{{message.content}}</div>
+    <div class="info">在你的文章<a [routerLink]="['/article',message.articleId]">{{message.articleTitle}}</a>下</div>
+  </div>
+  <div *ngSwitchCase="'reply'">
+    <div class="cont">{{message.content}}</div>
+    <div class="info">在<a>{{message.username}}</a>的文章<a [routerLink]="['/article',message.articleId]">{{message.articleTitle}}</a>下</div>
+  </div>
+  <div *ngSwitchCase="'review'">
+    <div class="cont">{{message.content}}</div>
+  </div>
+  <div *ngSwitchCase="'system'">
+    <div class="cont">{{message.content}}</div>
+  </div>
+  <div *ngSwitchCase="'publish'">
+    <div class="info"><a [routerLink]="['/article',message.articleId]">{{message.articleTitle}}</a></div>
+  </div>
+</div>

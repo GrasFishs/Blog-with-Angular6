@@ -1,4 +1,4 @@
-import {Article} from './article-item/Article';
+import {Article} from '../article-item/Article';
 
 export const articles: Array<Article> = [
   {

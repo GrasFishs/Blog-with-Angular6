@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {Article} from './article-item/Article';
+import {Article} from '../article-item/Article';
 import {articles} from './articles';
-import {ArticleService} from './article.service';
+import {ArticleService} from '../article.service';
 
 
 @Component({

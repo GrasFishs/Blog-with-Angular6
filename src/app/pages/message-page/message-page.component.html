@@ -1,0 +1,13 @@
+<nz-tabset
+  [nzTabPosition]="'left'"
+  [(nzSelectedIndex)]="selectedIndex"
+  (nzSelectChange)="getContent(selectedIndex)"
+  [nzType]="'line'">
+  <nz-tab
+    *ngFor="let tab of tabs"
+    [nzTitle]="tab.name">
+    <div *ngFor="let msg of tab.messages">
+      <ng-message-item [message] = "msg"></ng-message-item>
+    </div>
+  </nz-tab>
+</nz-tabset>

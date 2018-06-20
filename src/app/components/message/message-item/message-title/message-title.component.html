@@ -1,0 +1,8 @@
+<div [ngSwitch]="message.type" class="title">
+  <div *ngSwitchCase="'comment'" class="sub">{{message.username}}发表了评论</div>
+  <div *ngSwitchCase="'reply'" class="sub">{{message.username}}评论了你</div>
+  <div *ngSwitchCase="'review'" class="sub">审核通知</div>
+  <div *ngSwitchCase="'system'" class="sub">{{message.title}}</div>
+  <div *ngSwitchCase="'publish'" class="sub">{{message.username}}发布了文章</div>
+  <div class="date">{{message.date | formatDate}}</div>
+</div>

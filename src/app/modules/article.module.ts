@@ -1,15 +1,17 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {ArticleListComponent} from '../components/article-list/article-list.component';
-import {ArticleItemComponent} from '../components/article-list/article-item/article-item.component';
-import {ArticleComponent} from '../components/article-list/article/article.component';
-import {ArticleService} from '../components/article-list/article.service';
+import {ArticleListComponent} from '../components/article/article-list/article-list.component';
+import {ArticleItemComponent} from '../components/article/article-item/article-item.component';
+import {ArticleComponent} from '../components/article/article/article.component';
+import {ArticleService} from '../components/article/article.service';
+import {RouterModule} from '@angular/router';
 
 const components = [ArticleListComponent, ArticleItemComponent, ArticleComponent];
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   providers: [ArticleService],
   declarations: components,

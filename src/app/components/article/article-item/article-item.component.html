@@ -1,5 +1,5 @@
 <div>
-  <h2 class="title" (click)="toArticle(article.id)">{{article.title}}</h2>
+  <a class="title" [routerLink]="['/article',article.id]">{{article.title}}</a>
   <div class="content">{{article.content}}</div>
   <div class="author">{{article.author}}</div>
 </div>

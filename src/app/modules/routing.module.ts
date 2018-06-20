@@ -4,8 +4,8 @@ import {RouterModule, Routes} from '@angular/router';
 import {HomePageComponent} from '../pages/home-page/home-page.component';
 import {LoginPageComponent} from '../pages/login-page/login-page.component';
 import {RegisterPageComponent} from '../pages/register-page/register-page.component';
-import {Article} from '../components/article-list/article-item/Article';
-import {ArticleComponent} from '../components/article-list/article/article.component';
+import {ArticleComponent} from '../components/article/article/article.component';
+import {MessagePageComponent} from '../pages/message-page/message-page.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -22,6 +22,9 @@ const routes: Routes = [
   },
   {
     path: 'article/:id', component: ArticleComponent
+  },
+  {
+    path: 'message', component: MessagePageComponent
   }
 ];
 

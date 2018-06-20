@@ -1,0 +1,10 @@
+.title {
+  display: flex;
+  align-items: center; }
+  .title .sub {
+    font-size: 1.2em;
+    font-weight: 700; }
+  .title .date {
+    margin-left: 20px; }
+
+/*# sourceMappingURL=message-title.component.css.map */
