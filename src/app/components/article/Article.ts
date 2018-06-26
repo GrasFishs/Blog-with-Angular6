@@ -2,6 +2,7 @@ export interface Article {
   id: string;
   title: string;
   tag: string;
+  tagId: string;
   content: string;
   authorId: string;
   author: string;
@@ -9,4 +10,5 @@ export interface Article {
   likes: string;
   date: Date;
   cover: string;
+  views: number;
 }

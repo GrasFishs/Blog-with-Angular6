@@ -5,12 +5,16 @@ import {ArticleItemComponent} from '../components/article/article-item/article-i
 import {ArticleComponent} from '../components/article/article/article.component';
 import {ArticleService} from '../components/article/article.service';
 import {RouterModule} from '@angular/router';
+import {ToolsModule} from './tools.module';
+import {TagModule} from './tag.module';
 
 const components = [ArticleListComponent, ArticleItemComponent, ArticleComponent];
 
 @NgModule({
   imports: [
     CommonModule,
+    ToolsModule,
+    TagModule,
     RouterModule
   ],
   providers: [ArticleService],
@@ -18,7 +22,4 @@ const components = [ArticleListComponent, ArticleItemComponent, ArticleComponent
   exports: components,
 })
 export class ArticleModule {
-  static forComponents() {
-    return components;
-  }
 }

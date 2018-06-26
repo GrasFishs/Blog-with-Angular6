@@ -1,5 +1,19 @@
-<div>
+<div class="item">
   <a class="title" [routerLink]="['/article',article.id]">{{article.title}}</a>
-  <div class="content">{{article.content}}</div>
-  <div class="author">{{article.author}}</div>
+  <ng-tag style="position: absolute;right: 0;top: 0;"
+          class="tag"
+          [subTag]="article.tag"
+          [userId]="article.authorId"
+          [tagId]="article.tagId"></ng-tag>
+  <div class="body">
+    <div class="content">{{article.content}}</div>
+    <img *ngIf="article.cover" class="cover d-none d-sm-block" [src]="article.cover">
+  </div>
+  <div class="footer">
+    <div class="author" *ngIf="type === 'home'">{{article.author}}</div>
+    <div class="view" *ngIf="type === 'user'"><i class="anticon anticon-eye-o"></i>{{article.views}}</div>
+    <div class="comment"><i class="anticon anticon-message"></i>{{article.comments}}</div>
+    <div class="like"><i class="anticon anticon-heart-o"></i>{{article.likes}}</div>
+    <div class="date d-none d-sm-block"><i class="anticon anticon-clock-circle-o"></i>{{article.date | date: 'yyyy-MM-dd hh:mm:ss'}}</div>
+  </div>
 </div>

@@ -6,6 +6,7 @@ import {ToHomeComponent} from '../components/to-home/to-home.component';
 import {NgZorroAntdModule} from 'ng-zorro-antd';
 import {AvatarComponent} from '../components/avatar/avatar.component';
 import {RoutingModule} from './routing.module';
+import {TagComponent} from '../components/tag/tag.component';
 
 const components = [ToHomeComponent, ButtonComponent, NavigatorComponent, AvatarComponent];
 
@@ -19,7 +20,4 @@ const components = [ToHomeComponent, ButtonComponent, NavigatorComponent, Avatar
   exports: components
 })
 export class ToolsModule {
-  static forComponents() {
-    return components;
-  }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'ng-tags-list',
   templateUrl: './tags-list.component.html',

@@ -1,2 +1,9 @@
 <ng-user-panel></ng-user-panel>
-<ng-article-list></ng-article-list>
+<div class="row">
+  <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+    <ng-article-list [articles]="articles" [type]="'user'"></ng-article-list>
+  </div>
+  <div class="col-xl-4 col-lg-4 col-md-4 d-none d-md-block">
+    <div>标签管理</div>
+  </div>
+</div>

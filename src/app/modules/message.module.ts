@@ -4,12 +4,11 @@ import {MessagePageComponent} from '../pages/message-page/message-page.component
 import {NgZorroAntdModule} from 'ng-zorro-antd';
 import {MessageItemComponent} from '../components/message/message-item/message-item.component';
 import {MessageTitleComponent} from '../components/message/message-item/message-title/message-title.component';
-import {FormatDatePipe} from '../tools/format-date.pipe';
 import {MessageContentComponent} from '../components/message/message-item/message-content/message-content.component';
 import {RouterModule} from '@angular/router';
 import {ToolsModule} from './tools.module';
 
-const components = [MessagePageComponent, MessageItemComponent, MessageTitleComponent, MessageContentComponent, FormatDatePipe];
+const components = [MessagePageComponent, MessageItemComponent, MessageTitleComponent, MessageContentComponent];
 
 @NgModule({
   imports: [

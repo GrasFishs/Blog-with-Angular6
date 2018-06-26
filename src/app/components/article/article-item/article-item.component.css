@@ -1,5 +1,46 @@
-a {
-  font-size: 1.5em;
-  font-weight: 700; }
+@charset "UTF-8";
+.item {
+  padding: 10px 20px;
+  background: white;
+  transition: 0.2s all ease;
+  border-bottom: 1px solid lightgray;
+  position: relative;
+  margin-top: 5px; }
+  .item:hover {
+    border-bottom-width: 0px;
+    transform: scale(1.02) translateY(-5px);
+    box-shadow: 0 5px 10px lightgray; }
+  .item .title {
+    color: black;
+    font-size: 2em;
+    font-weight: bold; }
+  .item .body {
+    display: flex;
+    align-items: center;
+    margin: 10px 0px; }
+    .item .body .content {
+      /*缩进*/
+      text-indent: 22px;
+      /*显示三行内容，多余的用...替代*/
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 5;
+      text-overflow: ellipsis; }
+    .item .body .cover {
+      width: 107px;
+      height: 107px;
+      margin-left: 10px; }
+  .item .footer {
+    display: flex;
+    flex-direction: row;
+    font-weight: bold; }
+    .item .footer a {
+      font-size: 1.5em;
+      font-weight: 700; }
+    .item .footer > div {
+      margin-right: 15px; }
+      .item .footer > div:last-child {
+        margin-right: 0px; }
 
 /*# sourceMappingURL=article-item.component.css.map */

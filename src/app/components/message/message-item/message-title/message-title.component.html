@@ -16,6 +16,6 @@
     </div>
     <div *ngSwitchCase="'review'" class="sub">审核通知</div>
     <div *ngSwitchCase="'system'" class="sub">{{message.title}}</div>
-    <div class="date">{{message.date | formatDate}}</div>
+    <div class="date">{{message.date | date: 'yyyy/MM/dd hh:mm:ss'}}</div>
   </div>
 </div>

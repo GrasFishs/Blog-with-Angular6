@@ -10,10 +10,11 @@ import {RoutingModule} from './modules/routing.module';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';;
 
 import {registerLocaleData} from '@angular/common';
 import zh from '@angular/common/locales/zh';
+import {TagModule} from './modules/tag.module';
 
 
 registerLocaleData(zh);
@@ -30,6 +31,7 @@ registerLocaleData(zh);
     AccessModule,
     MessageModule,
     UserModule,
+    TagModule,
     RoutingModule,
     FormsModule,
     HttpClientModule,

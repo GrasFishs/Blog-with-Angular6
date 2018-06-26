@@ -7,6 +7,7 @@ import {RegisterPageComponent} from '../pages/register-page/register-page.compon
 import {ArticleComponent} from '../components/article/article/article.component';
 import {MessagePageComponent} from '../pages/message-page/message-page.component';
 import {UserPageComponent} from '../pages/user-page/user-page.component';
+import {TagPageComponent} from '../pages/tag-page/tag-page.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -29,6 +30,9 @@ const routes: Routes = [
   },
   {
     path: 'user/:id', component: UserPageComponent
+  },
+  {
+    path: 'tag/:tag/:user', component: TagPageComponent
   }
 ];
 

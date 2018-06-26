@@ -1,5 +1,6 @@
 import {Component, OnInit, Input} from '@angular/core';
 import {Message} from '../../Message';
+import {DatePipe} from '@angular/common';
 
 @Component({
   selector: 'ng-message-title',

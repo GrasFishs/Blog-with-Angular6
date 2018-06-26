@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Article} from '../Article';
 import {Router} from '@angular/router';
+import {DatePipe} from '@angular/common';
 
 @Component({
   selector: 'ng-article-item',
@@ -10,6 +11,7 @@ import {Router} from '@angular/router';
 export class ArticleItemComponent implements OnInit {
 
   @Input() article: Article;
+  @Input() type: string;
 
   constructor(private router: Router) {
   }

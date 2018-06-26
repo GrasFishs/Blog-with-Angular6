@@ -1,35 +1,21 @@
-import {Component, OnInit} from '@angular/core';
-import {ArticleService} from '../article.service';
-import {ActivatedRoute} from '@angular/router';
+import {Component, OnInit, Input} from '@angular/core';
+import {Article} from '../Article';
 
 
 @Component({
   selector: 'ng-article-list',
   templateUrl: './article-list.component.html',
-  providers: [ArticleService],
   styleUrls: ['./article-list.component.scss']
 })
 export class ArticleListComponent implements OnInit {
 
-  public articles;
+  @Input() articles: Article;
+  @Input() type: string; // user or home
 
-  constructor(private articleService: ArticleService, private route: ActivatedRoute) {
+  constructor() {
   }
 
   ngOnInit() {
-    this.getArticles();
-    this.getArticlesByUserId();
-  }
-
-  getArticles(): void {
-    this.articleService.getArticles().subscribe(articles => this.articles = articles);
-  }
-
-  getArticlesByUserId() {
-    const userId = this.route.snapshot.paramMap.get('id');
-    if (userId) {
-      this.articleService.getArticlesByUserId(userId).subscribe(articles => this.articles = articles);
-    }
   }
 
 }
